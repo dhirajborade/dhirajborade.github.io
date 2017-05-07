@@ -7,6 +7,7 @@
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
 </head>
 <body class="homepage">
 	<div id="page-wrapper">
@@ -46,9 +47,29 @@
 				</ul>
 			</nav>
 
+			<!--<nav id="navbar" class="homepage">
 
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li>
+						<a href="#">Portfolio</a>
+						<ul>
+							<li><a href="#banner">Projects</a></li>
+							<li><a href="#skills">Skills</a></li>
+							<li><a href="#achievements">Achievements</a></li>
+						</ul>
+					</li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#features">Experience</a></li>
+					<li><a href="#footer">Contact</a></li>
+					<li><a href="http://dhirajborade.github.io/Resume/ResumeDhirajBorade.pdf">Download Resume</a></li>
+				</ul>
+			</nav>-->
 
 		</div>
+
+		
 
 		<!-- Banner -->
 		<section id="banner">
@@ -234,7 +255,7 @@
 		<!-- Features -->
 		<div class="wrapper style1">
 			<section id="achievements" class="container special">
-				<header>
+				<header style="padding-top: 70px;">
 					<h2>Achievements</h2>
 				</header>
 				<br>
@@ -292,9 +313,8 @@
 
 		<!-- Features -->
 		<div class="wrapper style1">
-
 			<section id="education" class="container special">
-				<header>
+				<header style="padding-top: 45px;">
 					<h2>Education</h2>
 				</header>
 				<br>
@@ -450,5 +470,50 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
 
-	</body>
-	</html>
+		<script type="text/javascript">
+			/*(function ($) {
+				$(document).ready(function(){
+
+								// hide .navbar first
+								$(".navbar").hide();
+								
+								// fade in .navbar
+								$(function () {
+									$(window).scroll(function () {
+							            // set distance user needs to scroll before we fadeIn navbar
+							            if ($(this).scrollTop() > 100) {
+							            	$('.navbar').fadeIn();
+							            } else {
+							            	$('.navbar').fadeOut();
+							            }
+							        });
+
+
+								});
+
+							});
+						});*/
+						$(document).ready(function () {
+							
+							$(function () {
+									$(window).scroll(function () {
+										if (($(this).scrollTop() < 200) && ($(this).scrollTop() > 0)) {
+							            	$("#nav").show();
+							            } else {
+							            	if (($(this).scrollTop() < 650) && ($(this).scrollTop() > 200)) {
+							            		$('#nav').hide();
+							            	} else if ($(this).scrollTop() > 650){
+							            		$('#nav').show();
+							            	}
+							            }
+							            // set distance user needs to scroll before we fadeIn navbar
+							            console.log($(this).scrollTop());
+							        });
+
+
+								});
+							});
+					</script>
+
+				</body>
+				</html>
